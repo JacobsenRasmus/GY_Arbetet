@@ -1,7 +1,30 @@
 fileFormatVersion: 2
 guid: ca69a86937b60a64bbdea85b9eec45ed
-DefaultImporter:
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: _MapPrfab/sample_indoor
+    400000: _MapPrfab/sample_indoor/Transform
+    11400000: _MapPrfab/sample_indoor/MonoBehaviour-SuperTiled2Unity.SuperMap
+    11400002: _superAsset
+    11400004: _TilesetScriptObjectInternal_1
+    100100000: _MapPrfab
+    2569400265252428796: _MapPrfab/sample_indoor/Grid
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
+  errors:
+  - Old file format detected. You must save this file with a newer verion of Tiled.
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 3
+  tilesAsObjects: 0
+  importSorting: 0
+  isIsometric: 0
+  customImporterClassName: 
+  internalTilesets:
+  - {instanceID: 0}
