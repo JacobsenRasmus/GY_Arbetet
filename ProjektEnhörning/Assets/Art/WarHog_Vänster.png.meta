@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 7377d7c255af1944d87978bdea940ebb
+guid: a98f9284f53cc2e48870b6a8a1e6cce0
 TextureImporter:
   fileIDToRecycleName:
-    21300000: WarHog_0
-    21300002: WarHog_1
-    21300004: WarHog_2
-    21300006: WarHog_3
-    21300008: WarHog_4
-    21300010: WarHog_5
-    21300012: WarHog_6
-    21300014: WarHog_7
-    21300016: WarHog_8
+    21300000: WarHog_9
+    21300002: WarHog_10
+    21300004: WarHog_11
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -93,127 +87,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WarHog_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54728f6299da72041b4e3ea5c54b6429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WarHog_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 010dbeeb83da8c947b1cd89b3cd052d8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WarHog_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b66ef978272070b439b7c5654707a143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WarHog_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 482f2284155a13745b6952aac8d03eff
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WarHog_4
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e0e17dcf63e93141a2532454cf3bcbf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WarHog_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3cb98f92c63c2548bc17d5f97c7ede7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WarHog_6
+      name: WarHog_9
       rect:
         serializedVersion: 2
         x: 0
@@ -227,13 +101,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aa4dd515d589c5469d0110494a85a2a
+      spriteID: 1616806e8173bac48b272d646d1a89f6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WarHog_7
+      name: WarHog_10
       rect:
         serializedVersion: 2
         x: 16
@@ -247,13 +121,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56a98691b8868024cb3080c6ec4a1af3
+      spriteID: f36a11924f5fe4048a8095049cfe4d92
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WarHog_8
+      name: WarHog_11
       rect:
         serializedVersion: 2
         x: 32
@@ -267,7 +141,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b0884fad98d18d42b1779cc03291824
+      spriteID: a4f57029814307845821f2cabd1bac44
       vertices: []
       indices: 
       edges: []
@@ -275,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c3d0618b67a123648b874ba7cb2996cd
+    spriteID: e22fd90c1e0a0c24c9cc405996b7d829
     vertices: []
     indices: 
     edges: []
