@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BondeController : MonoBehaviour
 {
 
-    public float moveSpeed;     // spelarens hastighet
+    public float moveSpeed;     // Bondens hastighet
 
     public float timeBetweenMove;
     private float timeBetweenMoveCounter;
@@ -20,6 +21,10 @@ public class BondeController : MonoBehaviour
     private bool moving;
     private bool IsMoving;              // Rörsig spelaren Ja nej
 
+
+
+    public float waitToReload;
+    private bool reloading;
     // Use this for initialization
     void Start()
     {
@@ -62,6 +67,8 @@ public class BondeController : MonoBehaviour
                 LastMove = moveDirection;
             }
         }
+
+        
         /*
 
         // Move player right left
@@ -87,5 +94,28 @@ public class BondeController : MonoBehaviour
         anim.SetBool("IsMoving", IsMoving);
         anim.SetFloat("LastMoveX", LastMove.x);
         anim.SetFloat("LastMoveY", LastMove.y);
+
+
+        if (reloading)
+        {
+            waitToReload -= Time.deltaTime;
+            if(waitToReload < 0)
+            {
+                SceneManager.LoadScene(0);
+                    
+            }
+        }
+    }
+
+    //Collission
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.name == "WarHog_0")
+        {
+            //Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
+            reloading = true;
+
+        }
     }
 }
