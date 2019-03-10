@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8920b631b00b1264c9c46b87b16ae78b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 1
   followTarget: {fileID: 3427384437381189941, guid: cced2cf17d45312499320582878e4126,
     type: 3}
   waitToReload: 0
