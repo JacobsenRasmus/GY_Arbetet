@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -82,10 +83,16 @@ public class PlayerController : MonoBehaviour
             attacking = false;
             anim.SetBool("PlayerAttacking", false);
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
 
 
-        // ger animationer värde
-        anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
+
+
+            // ger animationer värde
+            anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
         anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
         anim.SetBool("PlayerMoving", PlayerMoving);
         anim.SetFloat("LastMoveX", LastMove.x);
