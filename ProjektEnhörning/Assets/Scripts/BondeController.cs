@@ -7,13 +7,7 @@ public class BondeController : MonoBehaviour
 {
 
     public float moveSpeed;     // Bondens hastighet
-    /*
-    public float timeBetweenMove;
-    private float timeBetweenMoveCounter;
-
-    public float timeToMove;
-    private float timeToMoveCounter;
-    */
+    
     private Rigidbody2D myRigidbody;    //
     private Animator anim;              // Ger oss till gång till animationerna
     private Vector3 LastMove;           // tar värdet på senaste riktning vi rörde oss
@@ -31,10 +25,6 @@ public class BondeController : MonoBehaviour
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
-        /*
-        timeBetweenMoveCounter = timeBetweenMove;
-        timeToMoveCounter = timeToMove;
-        */
         anim = GetComponent<Animator>();
     }
 
@@ -46,6 +36,7 @@ public class BondeController : MonoBehaviour
             followTarget.transform.position.y, transform.position.z);
         //moves to target pos
         transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
+     
         /*
         //IsMoving = false;
         if (moving)
