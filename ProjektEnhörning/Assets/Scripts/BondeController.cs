@@ -7,13 +7,7 @@ public class BondeController : MonoBehaviour
 {
 
     public float moveSpeed;     // Bondens hastighet
-    /*
-    public float timeBetweenMove;
-    private float timeBetweenMoveCounter;
 
-    public float timeToMove;
-    private float timeToMoveCounter;
-    */
     private Rigidbody2D myRigidbody;    //
     private Animator anim;              // Ger oss till gång till animationerna
     private Vector3 LastMove;           // tar värdet på senaste riktning vi rörde oss
@@ -22,6 +16,7 @@ public class BondeController : MonoBehaviour
     private bool IsMoving;              // Rörsig spelaren Ja nej
     public GameObject followTarget;     //tar objekt to follow
     private Vector3 targetPos;          //tar objects position
+    private CircleCollider2D attackRadius;
 
     // attack controlls
     public float waitToReload;
@@ -41,11 +36,23 @@ public class BondeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (attackRadius == true)
+        {
+            //finds target position
+            targetPos = new Vector3(followTarget.transform.position.x,
+                followTarget.transform.position.y, transform.position.z);
+            //moves to target pos
+            transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
+            IsMoving = true;
+        }
+
         //finds target position
         targetPos = new Vector3(followTarget.transform.position.x,
             followTarget.transform.position.y, transform.position.z);
         //moves to target pos
         transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
+        moveDirection = transform.position;
+        IsMoving = true;
         /*
         //IsMoving = false;
         if (moving)
@@ -75,27 +82,27 @@ public class BondeController : MonoBehaviour
                     Random.Range(-1f, 1f) * moveSpeed * Time.deltaTime, 0f);
                 LastMove = moveDirection;
             }*/
-    }
-
-        /*
-        // ger animationer värde
+        anim.SetBool("IsMoving", IsMoving);
         anim.SetFloat("MoveX", moveDirection.x);
         anim.SetFloat("MoveY", moveDirection.y);
-        anim.SetBool("IsMoving", IsMoving);
         anim.SetFloat("LastMoveX", LastMove.x);
         anim.SetFloat("LastMoveY", LastMove.y);
-        */
+    }
 
-        ////////if (reloading)
-        ////////{
-        ////////    waitToReload -= Time.deltaTime;
-        ////////    if(waitToReload < 0)
-        ////////    {
-        ////////        SceneManager.LoadScene(0);
-                    
-        ////////    }
-        ////////}
-    
+    /*
+    // ger animationer värde
+    */
+
+    ////////if (reloading)
+    ////////{
+    ////////    waitToReload -= Time.deltaTime;
+    ////////    if(waitToReload < 0)
+    ////////    {
+    ////////        SceneManager.LoadScene(0);
+
+    ////////    }
+    ////////}
+
 
     //Collission
     void OnCollisionEnter2D(Collision2D other)
