@@ -29,7 +29,13 @@ public class PlayerHealthManager : MonoBehaviour
 
     public void HurtPlayer (int damageToGive)
     {
-        PlayerCurrentHealth -= damageToGive;
+
+        bool anfall = GetComponent<PlayerController>().attacking;
+        if (anfall == false)
+        {
+            PlayerCurrentHealth -= damageToGive;
+        }
+        
     }
     public void SetMaxHealth()
     {
