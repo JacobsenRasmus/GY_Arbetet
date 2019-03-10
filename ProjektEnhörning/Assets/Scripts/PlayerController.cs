@@ -13,7 +13,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRigidbody;
     //private bool facingLeft;
 
-
+        //attacking
+    private bool attacking;
+    public float attackTime;
+    private float attackTimeCounter;
 
     // Use this for initialization
     void Start()
@@ -27,6 +30,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         PlayerMoving = false;
+
+        if(!attacking)
+        {
 
         // Move player right left
         if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
@@ -57,6 +63,26 @@ public class PlayerController : MonoBehaviour
         {
             playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
         }
+        //atttacking
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            attackTimeCounter = attackTime;
+            attacking = true;
+            //playerRigidbody.velocity = Vector2.zero;
+            anim.SetBool("PlayerAttacking", true);
+        }
+        }
+
+        if(attackTimeCounter > 0)
+        {
+            attackTimeCounter -= Time.deltaTime;
+        }
+        if(attackTimeCounter <= 0)
+        {
+            attacking = false;
+            anim.SetBool("PlayerAttacking", false);
+        }
+
 
         // ger animationer värde
         anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
