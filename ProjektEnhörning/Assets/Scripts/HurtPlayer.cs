@@ -22,7 +22,6 @@ public class HurtPlayer : MonoBehaviour
        if(other.gameObject.name == "WarHog_0")
         {
             other.gameObject.GetComponent<PlayerHealthManager>().HurtPlayer(damageToGive);
-
             //other.gameObject.SetActive(false);
             //reloading = true;
 

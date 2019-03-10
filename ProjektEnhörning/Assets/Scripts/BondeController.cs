@@ -96,15 +96,15 @@ public class BondeController : MonoBehaviour
         anim.SetFloat("LastMoveY", LastMove.y);
 
 
-        if (reloading)
-        {
-            waitToReload -= Time.deltaTime;
-            if(waitToReload < 0)
-            {
-                SceneManager.LoadScene(0);
+        ////////if (reloading)
+        ////////{
+        ////////    waitToReload -= Time.deltaTime;
+        ////////    if(waitToReload < 0)
+        ////////    {
+        ////////        SceneManager.LoadScene(0);
                     
-            }
-        }
+        ////////    }
+        ////////}
     }
 
     //Collission
