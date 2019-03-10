@@ -108,14 +108,14 @@ public class BondeController : MonoBehaviour
     }
 
     //Collission
-    private void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.name == "WarHog_0")
+        /*if(other.gameObject.name == "WarHog_0")
         {
             //Destroy(other.gameObject);
             other.gameObject.SetActive(false);
             reloading = true;
 
-        }
+        } */
     }
 }
