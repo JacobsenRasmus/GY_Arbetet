@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     //private bool facingLeft;
 
         //attacking
-    private bool attacking;
+    public bool attacking;
     public float attackTime;
     private float attackTimeCounter;
 

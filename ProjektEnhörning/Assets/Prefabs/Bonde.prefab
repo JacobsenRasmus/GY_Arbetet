@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  timeBetweenMove: 6
-  timeToMove: 10
+  followTarget: {fileID: 3427384437381189941, guid: cced2cf17d45312499320582878e4126,
+    type: 3}
   waitToReload: 0
 --- !u!114 &2805757063758685740
 MonoBehaviour:
